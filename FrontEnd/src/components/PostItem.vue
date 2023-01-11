@@ -12,7 +12,9 @@
       <div class="postMeta">
         <TheAvatar :src="post?.user?.avatar" />
         <span>{{ post?.user?.name }}</span>
-        <span class="postPubDate">{{ dateToRelative(post.publishedAt) }}</span>
+        <span class="postPubDate">{{
+          dateToRelative(post.publishedAt)
+        }}</span>
         <PostActions
           :likes="post.liked_bies"
           :comments="post.comments"
@@ -21,7 +23,9 @@
           :favoredByMe="post.favoredByMe"
           @likeClick="$store.dispatch('toggleLike', post.id)"
           @favorClick="$store.dispatch('toggleFavor', post.id)"
-          @commentsClick="this.$store.dispatch('showPostDetails', post.id)"
+          @commentsClick="
+            this.$store.dispatch('showPostDetails', post.id)
+          "
         />
       </div>
       <div class="postDesc">

@@ -13,7 +13,6 @@ export const post = {
       state.list = posts;
     },
     toggleLike(state, { id, isLike }) {
-      console.log(isLike);
       const post = state.list.find((post) => post.id === id);
       if (isLike) {
         post.liked_bies = (post.liked_bies || 0) + 1; //避免undefined +1
@@ -43,9 +42,8 @@ export const post = {
     }
   },
   actions: {
-    async uploadPost({ commit, dispatch }, { image, description, likedByMe }) {
-      console.log(description, likedByMe);
-      await createPost(image, description, likedByMe);
+    async uploadPost({ commit, dispatch }, { image, description }) {
+      await createPost(image, description);
       dispatch("loadAllPosts");
       // 關閉頁面
       commit("changeShowPostUpload", false);

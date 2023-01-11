@@ -17,43 +17,44 @@ export function getUser() {
 }
 
 export async function register(email, username, password) {
-  try {
-    const result = await request("/api/auth/local/register", {
-      method: "POST",
-      auth: false,
-      body: {
-        email,
-        username,
-        password,
-        name: username
-      }
-    });
-    console.log(result);
-    setJwtToken(result.jwt);
-    saveUser(result.user);
-    // 建立個人資料
-    return result.user;
-  } catch (error) {
-    throw error;
-  }
-}
-
-export async function login(email, password) {
   // try {
-  const result = await request("/api/auth/local", {
+  const result = await request("/api/auth/local/register", {
     method: "POST",
     auth: false,
     body: {
-      identifier: email,
-      password
+      email,
+      username,
+      password,
+      name: username
     }
   });
+  // console.log(result);
   setJwtToken(result.jwt);
   saveUser(result.user);
+  // 建立個人資料
   return result.user;
   // } catch (error) {
   //   throw error;
   // }
+}
+
+export async function login(email, password) {
+  try {
+    const result = await request("/api/auth/local", {
+      method: "POST",
+      auth: false,
+      body: {
+        identifier: email,
+        password
+      }
+    });
+    setJwtToken(result.jwt);
+    saveUser(result.user);
+    return result.user;
+  } catch (error) {
+    console.log(231);
+    throw error;
+  }
 }
 
 export function logout() {

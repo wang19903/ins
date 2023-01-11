@@ -5,9 +5,10 @@
   </svg>
 </template>
 <script setup>
-import sprite from "../assets/icons/sprite.svg"
+// 要import
+import sprite from "../assets/icons/sprite.svg";
 
 defineProps({
-    icon:String
-})
+  icon: String,
+});
 </script>

@@ -4,14 +4,13 @@ import { getUser, login, logout, register } from "../../apis/auth";
 export const user = {
   state() {
     return {
-      // user: getUser() || {}
-      user: {}
+      user: getUser() || {},
     };
   },
   mutations: {
     setUser(state, user) {
       state.user = user;
-    }
+    },
   },
   actions: {
     async registerUser({ commit }, { email, username, password }) {
@@ -33,6 +32,6 @@ export const user = {
     async logoutUser({ commit }) {
       logout();
       commit("setUser", {});
-    }
-  }
+    },
+  },
 };

@@ -2,8 +2,7 @@
   <div>
     <h2 class="title">編輯個人資料</h2>
     <div class="changeAvatar">
-      <TheAvatar :width="48" :height="48" />
-      <!-- :src="profileData.avatar" -->
+      <TheAvatar :width="48" :height="48" :src="profileData.avatar" />
       <TheButton>修改頭像</TheButton>
       <input type="file" class="inputFile" @change="uploadAvatar" />
     </div>
@@ -51,7 +50,7 @@ import TheButton from "../components/TheButton.vue";
 import TheAvatar from "../components/TheAvatar.vue";
 import { useStore } from "vuex";
 import { computed, reactive } from "vue";
-// import { uploadFile } from "../apis/file";
+import { uploadFile } from "../apis/file";
 import { useRouter } from "vue-router";
 
 const store = useStore();
@@ -68,16 +67,16 @@ const profileData = reactive({
   website: user.value.website,
 });
 
-// async function uploadAvatar(e) {
-//   const file = e.target.files[0];
-//   const url = await uploadFile(file);
-//   profileData.avatar = url;
-// }
+async function uploadAvatar(e) {
+  const file = e.target.files[0];
+  const url = await uploadFile(file);
+  profileData.avatar = url;
+}
 
-// async function updateUser() {
-//   await store.dispatch("updateUser", profileData);
-//   router.push("/profile");
-// }
+async function updateUser() {
+  await store.dispatch("updateUser", profileData);
+  router.push("/profile");
+}
 </script>
 <style scoped>
 .title {

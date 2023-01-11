@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2 class="title">搜索结果：{{ term }}</h2>
+    <h2 class="title">搜尋結果：{{ term }}</h2>
     <PostList>
       <PostItem v-for="post in searchResult" :post="post" />
     </PostList>

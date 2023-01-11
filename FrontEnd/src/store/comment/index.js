@@ -3,13 +3,13 @@ import { createComment, loadComments } from "../../apis/comment";
 export const comment = {
   state() {
     return {
-      list: []
+      list: [],
     };
   },
   mutations: {
     initializeComments(state, comments) {
       state.list = comments;
-    }
+    },
   },
   actions: {
     async addComment({ commit, dispatch }, { content, postId }) {
@@ -20,6 +20,6 @@ export const comment = {
     async loadAllComments({ commit }, postId) {
       const comments = await loadComments(postId);
       commit("initializeComments", comments);
-    }
-  }
+    },
+  },
 };

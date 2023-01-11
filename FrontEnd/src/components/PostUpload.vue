@@ -37,23 +37,23 @@ const description = ref("");
 
 async function handleImageUpload(e) {
   //  accept="image/*"圖片檔。只能上傳一張圖片
-  console.log(e.target.files);
+  // console.log(e);
   const imageFile = e.target.files[0];
   if (imageFile) {
     // createObjectURL預覽上傳圖片
     imageObjUrl.value = URL.createObjectURL(imageFile);
-    console.log(imageObjUrl);
+    // console.log(imageObjUrl, 99);
     // 圖片資料
     image.value = imageFile;
-    console.log(imageFile);
+    // console.log(imageFile, 99);
   }
 }
 function publishPost() {
+  // console.log(e, "publishPost");
+  // console.log(image.value, description.value, "publishPost");
   store.dispatch("uploadPost", {
     image: image.value,
     description: description.value,
-    likedByMe: 0, //bug..資料讀出來還是true
-    // likedByMe: false, //bug..資料讀出來還是true
   });
 }
 </script>

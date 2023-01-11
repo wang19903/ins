@@ -1,6 +1,5 @@
 <!-- 按鈕模組 -->
 <template>
-  <!-- <button class="button" :class="{ color === 'primary'? primary : reverse }"> -->
   <button class="button" :class="{ primary: color === 'primary', reverse }">
     <slot></slot>
   </button>

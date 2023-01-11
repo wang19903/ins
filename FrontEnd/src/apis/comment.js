@@ -4,11 +4,12 @@ export async function createComment(content, postId) {
   await request("/api/comments", {
     method: "POST",
     body: {
+      //strapi格式
       data: {
         content,
-        post: postId,
-      },
-    },
+        post: postId
+      }
+    }
   });
 }
 
@@ -26,8 +27,8 @@ export async function loadComments(postId) {
       pubDate: result?.publishedAt,
       user: {
         id: result?.user?.data?.id,
-        ...result?.user?.data?.attributes,
-      },
+        ...result?.user?.data?.attributes
+      }
     };
   });
 }

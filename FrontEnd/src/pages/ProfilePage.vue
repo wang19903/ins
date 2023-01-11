@@ -5,13 +5,15 @@
       <div class="profile">
         <p class="name">
           <span>{{ user.name }}</span
-          ><router-link to="/profile/edit">编辑个人资料</router-link>
+          ><router-link to="/profile/edit">編輯個人資料</router-link>
         </p>
         <p class="handle">@{{ user.username }}</p>
         <div class="description">
           <pre>{{ user.intro }}</pre>
         </div>
-        <p class="website">{{ user.website }}</p>
+        <p class="website">網站: {{ user.website }}</p>
+        <p>性別: {{ gender }}</p>
+        <p>電話: {{ user.mobilePhone }}</p>
       </div>
     </div>
     <div class="tabs">
@@ -49,10 +51,16 @@ import { loadPostsByMe, loadPostsLikedOrFavoredByMe } from "../apis/post";
 const store = useStore();
 
 const user = computed(() => store.state.user.user);
-
+const gender = computed(() => {
+  if (store.state.user.user.gender === "M") {
+    return "男生";
+  } else {
+    return "女生";
+  }
+});
 const tabs = ref([
   {
-    label: "圖片",
+    label: "我的",
     icon: "posts",
   },
   {

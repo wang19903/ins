@@ -34,7 +34,6 @@ defineProps({
 
 const emit = defineEmits(["likeClick", "commentsClick", "favorClick"]);
 </script>
-
 <style scoped>
 .postActions {
   display: grid;

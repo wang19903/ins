@@ -1,12 +1,10 @@
 import { getJwtToken, getUser } from "./auth";
 import { request } from "../utils/request";
 
-export async function createPost(image, description, likedByMe) {
+export async function createPost(image, description) {
   const formData = new FormData();
   formData.append("files.image", image);
-  formData.append("data", JSON.stringify({ description, likedByMe }));
-
-  // formData.append("data", JSON.stringify({ likedByMe }));
+  formData.append("data", JSON.stringify({ description }));
 
   await fetch("/api/posts", {
     method: "POST",
@@ -26,7 +24,9 @@ export async function loadPosts(filters = "") {
   const response = await request(
     "/api/posts?populate=*" + (filters && `&${filters}`)
   );
-  console.log(response);
+  console.log(response, "loadPosts");
+  // loadPostsLikedOrFavoredByMe("likes");
+  // loadPostsLikedOrFavoredByMe("favors");
   //? return undefined 不是報錯
   return response.data.map((post) => ({
     id: post?.id,
@@ -49,9 +49,12 @@ export async function loadPostsByMe() {
  * @returns
  */
 export async function loadPostsLikedOrFavoredByMe(type = "likes") {
+  //過濾用戶ID等於現在用戶ID
+  // console.log(response, "loadPostsByMe");
   const response = await request(
     `/api/users/me?populate[${type}][populate][0]=image`
   );
+  // console.log(response, "loadPostsLikedOrFavoredByMe");
   return response[type].map((post) => ({
     ...post,
     image: post?.image?.[0].url

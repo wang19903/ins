@@ -19,7 +19,8 @@ export function dateToRelative(dateStr) {
   }
 
   return `${date.getFullYear()}-${("0" + (date.getMonth() + 1)).slice(-2)}-${(
-    "0" + date.getDate()
+    "0" +
+    (date.getDate() + 1)
   ).slice(-2)}`;
   //date.getDate() + 1
   //+字串0從後面取2，保持格式一致

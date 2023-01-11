@@ -16,10 +16,11 @@
 </template>
 
 <script setup>
-import TheLayout from "./components/TheLayout.vue";
-import NavBar from "./components/NavBar.vue";
 import "./assets/base.css";
+import NavBar from "./components/NavBar.vue";
+import TheLayout from "./components/TheLayout.vue";
 </script>
+
 <style scoped>
 .header {
   height: 80px;
@@ -37,4 +38,3 @@ import "./assets/base.css";
   width: 100%;
 }
 </style>
-

@@ -63,7 +63,7 @@ import PostActions from "./PostActions.vue";
 import TheModal from "./TheModal.vue";
 import { useStore } from "vuex";
 import { computed, ref } from "vue";
-// import { dateToRelative } from "../utils/date";
+import { dateToRelative } from "../utils/date";
 
 const content = ref("");
 

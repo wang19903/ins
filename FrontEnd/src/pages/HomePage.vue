@@ -1,5 +1,4 @@
 <template>
-  HomePage
   <div>
     <PostList>
       <PostItem v-for="post in posts" :post="post" :key="post.id" />
@@ -19,7 +18,7 @@ import { computed, onMounted } from "vue";
 const store = useStore();
 const showPostUpload = computed(() => store.state.showPostUpload);
 const showPostDetails = computed(() => store.state.showPostDetails);
-const posts = computed(() => store.state.post.list);
+const posts = computed(() => store.state.post.list.reverse());
 
 onMounted(() => {
   store.dispatch("loadAllPosts");

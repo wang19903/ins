@@ -7,7 +7,12 @@
     </div>
     <div class="navItems">
       <router-link to="/"><TheIcon icon="home" /></router-link>
-      <button @click="publishPost()">
+      <button
+        @click="publishPost()"
+        v-if="
+          this.$route.name !== 'profile' && this.$route.name !== 'profileEdit'
+        "
+      >
         <TheIcon icon="publish" />
       </button>
       <!-- dropdown -->
@@ -17,8 +22,8 @@
           :height="42"
           style="cursor: pointer"
           @click="showDropdown = !showDropdown"
+          :src="user.avatar"
         />
-        <!-- :src="user.avatar" -->
         <div
           class="dropdownMenu"
           v-show="showDropdown"

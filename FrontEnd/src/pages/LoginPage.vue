@@ -2,7 +2,7 @@
   <div class="loginPage">
     <img src="../assets/phone.png" alt="" class="phoneImage" />
     <div class="loginForm">
-      <!-- <img src="../assets/logo.svg" alt="" /> -->test
+      <img src="../assets/logo.svg" alt="" />
       <form @submit.prevent>
         <input type="email" placeholder="信箱" v-model="email" />
         <input
