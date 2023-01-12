@@ -1,7 +1,0 @@
-{
-  "compilerOptions": {
-    "baseUrl": "./src",
-    "allowSyntheticDefaultImports": true,
-    "module": "ES2015"
-  }
-}
