@@ -39,22 +39,28 @@ export async function register(email, username, password) {
 }
 
 export async function login(email, password) {
-  try {
-    const result = await request("/api/auth/local", {
-      method: "POST",
-      auth: false,
-      body: {
-        identifier: email,
-        password
-      }
-    });
+  // try {
+  const result = await request("/api/auth/local", {
+    method: "POST",
+    auth: false,
+    body: {
+      identifier: email,
+      password
+    }
+  });
+
+  if (result.user) {
+    console.log(result, 321);
     setJwtToken(result.jwt);
     saveUser(result.user);
     return result.user;
-  } catch (error) {
-    console.log(231);
-    throw error;
+  } else {
+    console.log(result.error.message);
+    return result.error.message;
   }
+  // } catch (error) {
+  //   throw error;
+  // }
 }
 
 export function logout() {

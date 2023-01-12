@@ -2,7 +2,7 @@
   <nav class="navbar">
     <router-link to="/"><img src="../assets/logo.svg" /></router-link>
     <div class="searchInput">
-      <input type="text" @change="searchPosts" />
+      <input type="text" @change="searchPosts" v-model="searchTerm" />
       <TheIcon icon="search" />
     </div>
     <div class="navItems">
@@ -48,7 +48,7 @@ import { ref, computed } from "vue";
 const showDropdown = ref(false);
 const store = useStore();
 const router = useRouter();
-
+const searchTerm = ref();
 const user = computed(() => store.state.user.user);
 
 function publishPost() {
@@ -56,13 +56,18 @@ function publishPost() {
 }
 
 async function searchPosts(e) {
-  await store.dispatch("searchPosts", e.target.value);
-  router.push({
-    name: "search_result",
-    params: {
-      term: e.target.value,
-    },
-  });
+  if (searchTerm.value === "") {
+    router.replace("/");
+  } else {
+    await store.dispatch("searchPosts", searchTerm.value);
+    router.push({
+      name: "search_result",
+      params: {
+        term: searchTerm.value,
+      },
+    });
+    searchTerm.value = "";
+  }
 }
 
 async function logout() {

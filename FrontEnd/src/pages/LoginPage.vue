@@ -29,10 +29,12 @@
           />勾選表示同意隱私權政策
         </div>
       </form>
+      <Alert></Alert>
     </div>
   </div>
 </template>
 <script setup>
+import Alert from "../components/Alert.vue";
 import { ref } from "vue";
 import { useStore } from "vuex";
 import { useRouter } from "vue-router";
@@ -52,6 +54,7 @@ async function register() {
     alert("請先勾選同意隱私權政策");
     return;
   }
+
   await store.dispatch("registerUser", {
     email: email.value,
     username: username.value,
@@ -61,10 +64,12 @@ async function register() {
 }
 
 async function login() {
-  await store.dispatch("loginUser", {
+  const res = await store.dispatch("loginUser", {
     email: email.value,
     password: password.value,
   });
+  console.log(res, "login");
+  store.dispatch("messageAlert", res);
   router.replace("/");
 }
 </script>
@@ -73,17 +78,16 @@ async function login() {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  gap: 5vw;
+  /* gap: 5vw; */
   width: 100vw;
   height: 100vh;
   max-width: 100%;
   background: #f8f9fb;
-
-  padding: 0 10vw;
+  /* padding: 0 10vw; */
 }
 
 .phoneImage {
-  max-width: 400px;
+  max-width: 700px;
   position: relative;
   top: 36px;
   justify-self: end;
@@ -99,7 +103,7 @@ async function login() {
   display: grid;
   place-items: center;
   row-gap: 52px;
-  width: 380px;
+  width: 370px;
 }
 .loginForm > form {
   display: grid;
@@ -136,5 +140,21 @@ input::placeholder {
   display: flex;
   align-items: center;
   gap: 6px;
+}
+@media screen and (max-width: 780px) {
+  .loginPage {
+    grid-template-columns: 1fr;
+    grid-auto-flow: dense;
+  }
+  .loginPage > .loginForm {
+    grid-row-start: 1;
+  }
+  .phoneImage,
+  .loginForm {
+    margin: auto;
+  }
+  .loginPage img {
+    max-width: 370px;
+  }
 }
 </style>

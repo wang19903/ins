@@ -4,13 +4,13 @@ import { getUser, login, logout, register } from "../../apis/auth";
 export const user = {
   state() {
     return {
-      user: getUser() || {},
+      user: getUser() || {}
     };
   },
   mutations: {
     setUser(state, user) {
       state.user = user;
-    },
+    }
   },
   actions: {
     async registerUser({ commit }, { email, username, password }) {
@@ -18,12 +18,14 @@ export const user = {
       commit("setUser", user);
     },
     async loginUser({ commit }, { email, password }) {
-      // try {
       const user = await login(email, password);
-      commit("setUser", user);
-      // } catch (error) {
-      //   console.log(error);
-      // }
+      if (user.confirmed) {
+        commit("setUser", user);
+        return "success";
+      } else {
+        console.log(user);
+        return user;
+      }
     },
     async updateUser({ commit }, user) {
       const updatedUser = await changeUser(user);
@@ -32,6 +34,6 @@ export const user = {
     async logoutUser({ commit }) {
       logout();
       commit("setUser", {});
-    },
-  },
+    }
+  }
 };

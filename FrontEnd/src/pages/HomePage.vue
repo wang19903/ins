@@ -24,4 +24,5 @@ onMounted(() => {
   store.dispatch("loadAllPosts");
 });
 </script>
-<style scoped></style>
+<style scoped>
+</style>
