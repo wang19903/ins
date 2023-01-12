@@ -10,33 +10,33 @@ const routes = [
   {
     path: "/",
     name: "home",
-    component: HomePage,
+    component: HomePage
   },
   {
     path: "/search_result",
     name: "search_result",
-    component: SearchPage,
+    component: SearchPage
   },
   {
     path: "/profile",
     name: "profile",
-    component: ProfilePage,
+    component: ProfilePage
   },
   {
     path: "/profile/edit",
     name: "profileEdit",
-    component: ProfileEdittingPage,
+    component: ProfileEdittingPage
   },
   {
     path: "/login",
     name: "login",
-    component: LoginPage,
-  },
+    component: LoginPage
+  }
 ];
 
 const router = createRouter({
   routes: routes,
-  history: createWebHistory(),
+  history: createWebHistory()
 });
 
 router.beforeEach((to) => {
@@ -48,4 +48,4 @@ router.beforeEach((to) => {
   }
 });
 
-export { router };
+export { router }; //命名導出
