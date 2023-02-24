@@ -1,6 +1,10 @@
 import { changeUser } from "../../apis/user";
 import { getUser, login, logout, register } from "../../apis/auth";
 
+// export enum USER_ACTION_TYPE{
+//   updateUser = "UPDATEUSER"
+// }
+
 export const user = {
   state() {
     return {

@@ -1,22 +1,13 @@
 <template>
-  <TheModal @close="store.commit('changeShowPostUpload', false)">
+  <TheModal @close="store.commit(MutationType.changeShowPostUpload, false)">
     <div class="postUpload">
       <label class="upload">
         <img v-if="imageObjUrl" :src="imageObjUrl" class="preview" />
         <TheIcon v-else icon="upload-image" />
-        <input
-          type="file"
-          accept="image/*"
-          class="fileChooser"
-          @change="handleImageUpload"
-        />
+        <input type="file" accept="image/*" class="fileChooser" @change="handleImageUpload" />
       </label>
       <div class="postContent">
-        <textarea
-          placeholder="寫些內容...."
-          class="postContentInput"
-          v-model="description"
-        ></textarea>
+        <textarea placeholder="寫些內容...." class="postContentInput" v-model="description"></textarea>
         <TheButton class="pubBtn" @click="publishPost">發佈</TheButton>
       </div>
     </div>
@@ -28,8 +19,10 @@ import TheIcon from "./TheIcon.vue";
 import TheButton from "./TheButton.vue";
 import { useStore } from "vuex";
 import { ref } from "vue";
+import { key } from '../store'
+import { MutationType } from "../store/mutations";
 
-const store = useStore();
+const store = useStore(key);
 const imageObjUrl = ref("");
 
 const image = ref(null);
@@ -71,13 +64,15 @@ function publishPost() {
   object-fit: cover;
   min-height: 0;
 }
+
 .upload {
   display: grid;
   place-items: center;
   cursor: pointer;
   min-height: 0;
 }
-.upload > svg {
+
+.upload>svg {
   width: 254px;
   height: 316px;
 }
@@ -90,6 +85,7 @@ function publishPost() {
 .postContent {
   display: grid;
 }
+
 .postContentInput {
   border-bottom: none;
   resize: none;

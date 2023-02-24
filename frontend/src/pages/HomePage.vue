@@ -7,15 +7,16 @@
     <PostUpload v-if="showPostUpload" />
   </div>
 </template>
-<script setup>
+<script setup lang="ts">
 import PostList from "../components/PostList.vue";
 import PostItem from "../components/PostItem.vue";
 import PostUpload from "../components/PostUpload.vue";
 import PostDetails from "../components/PostDetails.vue";
 import { useStore } from "vuex";
 import { computed, onMounted } from "vue";
+import { key } from '../store'
 
-const store = useStore();
+const store = useStore(key);
 const showPostUpload = computed(() => store.state.showPostUpload);
 const showPostDetails = computed(() => store.state.showPostDetails);
 const posts = computed(() => store.state.post.list.reverse());
@@ -25,4 +26,5 @@ onMounted(() => {
 });
 </script>
 <style scoped>
+
 </style>

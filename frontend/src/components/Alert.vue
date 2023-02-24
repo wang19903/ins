@@ -1,13 +1,15 @@
 <template>
   <div class="message-alert" v-if="store.state.messages">
-    <div>{{ store.state.messages }}</div>
+    <div>{{
+      store.state.messages
+    }}</div>
   </div>
 </template>
-<script setup>
+<script setup lang="ts">
 import { ref } from "vue";
 import { useStore } from "vuex";
-import { computed } from "vue";
-const store = useStore();
+import { key } from '../store'
+const store = useStore(key);
 </script>
 <style scope>
 .message-alert {

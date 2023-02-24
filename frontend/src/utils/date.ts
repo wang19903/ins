@@ -1,8 +1,9 @@
-export function dateToRelative(dateStr) {
+export function dateToRelative(dateStr: string) {
   const date = new Date(dateStr);
 
   const now = new Date();
-  const diff = now - date;
+  //TS要求明確，日期無法運算，前方要多一個+
+  const diff = +now - +date;
 
   if (diff < 1000 * 60) {
     const seconds = Math.floor(diff / 1000);

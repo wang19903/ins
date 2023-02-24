@@ -5,28 +5,16 @@
       <img src="../assets/logo.svg" alt="" />
       <form @submit.prevent>
         <input type="email" placeholder="信箱" v-model="email" />
-        <input
-          v-if="!isLogin"
-          type="text"
-          placeholder="名字"
-          v-model="username"
-        />
+        <input v-if="!isLogin" type="text" placeholder="名字" v-model="username" />
         <input type="password" placeholder="密碼" v-model="password" />
-        <button
-          type="submit"
-          class="loginButton"
-          @click="isLogin ? login() : register()"
-        >
-          {{ isLogin ? "登入" : "註冊" }}
+        <button type="submit" class="loginButton" @click="isLogin ? login() : register()">
+          {{ isLogin? "登入": "註冊" }}
         </button>
         <p @click="isLogin = !isLogin" class="info">
-          {{ isLogin ? "沒有帳號?點及註冊" : "已有帳號?點擊登入" }}
+          {{ isLogin? "沒有帳號?點及註冊": "已有帳號?點擊登入" }}
         </p>
         <div v-if="!isLogin" class="agreement">
-          <input
-            type="checkbox"
-            v-model="agreementChecked"
-          />勾選表示同意隱私權政策
+          <input type="checkbox" v-model="agreementChecked" />勾選表示同意隱私權政策
         </div>
       </form>
       <Alert></Alert>
@@ -38,7 +26,8 @@ import Alert from "../components/Alert.vue";
 import { ref } from "vue";
 import { useStore } from "vuex";
 import { useRouter } from "vue-router";
-
+import { key } from '../store'
+import { ActionType } from "../store/actions";
 const isLogin = ref(true);
 
 const email = ref("");
@@ -46,7 +35,7 @@ const username = ref("");
 const password = ref("");
 const agreementChecked = ref(false);
 
-const store = useStore();
+const store = useStore(key);
 const router = useRouter();
 
 async function register() {
@@ -69,7 +58,7 @@ async function login() {
     password: password.value,
   });
   console.log(res, "login");
-  store.dispatch("messageAlert", res);
+  store.dispatch(ActionType.messageAlert, res);
   router.replace("/");
 }
 </script>
@@ -105,7 +94,8 @@ async function login() {
   row-gap: 52px;
   width: 370px;
 }
-.loginForm > form {
+
+.loginForm>form {
   display: grid;
   row-gap: 24px;
   width: 100%;
@@ -141,18 +131,22 @@ input::placeholder {
   align-items: center;
   gap: 6px;
 }
+
 @media screen and (max-width: 780px) {
   .loginPage {
     grid-template-columns: 1fr;
     grid-auto-flow: dense;
   }
-  .loginPage > .loginForm {
+
+  .loginPage>.loginForm {
     grid-row-start: 1;
   }
+
   .phoneImage,
   .loginForm {
     margin: auto;
   }
+
   .loginPage img {
     max-width: 370px;
   }

@@ -21,7 +21,7 @@
           :favoredByMe="post.favoredByMe"
           @likeClick="$store.dispatch('toggleLike', post.id)"
           @favorClick="$store.dispatch('toggleFavor', post.id)"
-          @commentsClick="this.$store.dispatch('showPostDetails', post.id)"
+          @commentsClick="$store.dispatch('showPostDetails', post.id)"
         />
       </div>
       <div class="postDesc">
@@ -32,13 +32,13 @@
     </div>
   </div>
 </template>
-<script setup>
+<script setup lang="ts">
 import TheAvatar from "../components/TheAvatar.vue";
 import PostActions from "../components/PostActions.vue";
 import { dateToRelative } from "../utils/date";
 
 defineProps({
-  post: {
+  post :{
     type: Object,
     default: {},
   },

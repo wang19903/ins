@@ -1,7 +1,0 @@
-{
-  "compilerOptions": {
-    "baseUrl": "./src", //起始路徑
-    "allowSyntheticDefaultImports": true, //如果還沒導出，充許引入其他模組 套件..
-    "module": "ES2015" //使用ES6 import export管理方式
-  }
-}

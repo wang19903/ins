@@ -18,7 +18,7 @@ export async function loadComments(postId) {
   const response = await request(
     "/api/comments?populate=*&filters[post][id][$eq]=" + postId
   );
-
+  console.log(response, "loadComments");
   return response.data.map((comment) => {
     const result = comment?.attributes;
     return {

@@ -6,29 +6,19 @@
       <TheIcon icon="search" />
     </div>
     <div class="navItems">
-      <router-link to="/"><TheIcon icon="home" /></router-link>
-      <button
-        @click="publishPost()"
-        v-if="
-          this.$route.name !== 'profile' && this.$route.name !== 'profileEdit'
-        "
-      >
+      <router-link to="/">
+        <TheIcon icon="home" />
+      </router-link>
+      <button @click="publishPost()" v-if="
+        $route.name !== 'profile' && $route.name !== 'profileEdit'
+      ">
         <TheIcon icon="publish" />
       </button>
       <!-- dropdown -->
       <div class="profileDropDown">
-        <TheAvatar
-          :width="42"
-          :height="42"
-          style="cursor: pointer"
-          @click="showDropdown = !showDropdown"
-          :src="user.avatar"
-        />
-        <div
-          class="dropdownMenu"
-          v-show="showDropdown"
-          @click="showDropdown = false"
-        >
+        <TheAvatar :width="42" :height="42" style="cursor: pointer" @click="showDropdown = !showDropdown"
+          :src="user.avatar" />
+        <div class="dropdownMenu" v-show="showDropdown" @click="showDropdown = false">
           <ul class="profileMenu">
             <li><router-link to="/profile">個人頁面</router-link></li>
             <li @click="logout">登出</li>
@@ -38,24 +28,26 @@
     </div>
   </nav>
 </template>
-<script setup>
+<script setup >
 import TheIcon from "./TheIcon.vue";
 import TheAvatar from "./TheAvatar.vue";
 import { useStore } from "vuex";
 import { useRouter } from "vue-router";
 import { ref, computed } from "vue";
+import { key } from '../store'
+import { MutationType } from "../store/mutations";
 
 const showDropdown = ref(false);
-const store = useStore();
+const store = useStore(key);
 const router = useRouter();
 const searchTerm = ref();
 const user = computed(() => store.state.user.user);
 
 function publishPost() {
-  store.commit("changeShowPostUpload", true);
+  store.commit(MutationType.changeShowPostUpload, true);
 }
 
-async function searchPosts(e) {
+async function searchPosts() {
   if (searchTerm.value === "") {
     router.replace("/");
   } else {
@@ -84,6 +76,7 @@ async function logout() {
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
 }
+
 .navbar svg {
   width: 38px;
   height: 38px;
@@ -103,7 +96,7 @@ async function logout() {
   border: none;
 }
 
-.searchInput > svg {
+.searchInput>svg {
   position: absolute;
   left: 0;
   top: 11px;
@@ -117,7 +110,7 @@ async function logout() {
   align-items: center;
 }
 
-.navItems > button {
+.navItems>button {
   border: none;
   background: none;
 }
