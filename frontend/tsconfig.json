@@ -1,0 +1,27 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.web.json",
+  "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
+  "compilerOptions": {
+    // "noImplicitAny": true, //不自動判斷類型 = any
+    "target": "ESNext", //使用最新 ECMAScript 版本
+    // "useDefineForClassFields": true, //TS 3.7 以上版本，允許使用 ES2019 的類別屬性定義語法
+    "module": "ESNext", //使用最新 ECMAScript 版本
+    // "resolveJsonModule": true, //解析json
+    "isolatedModules": false, //單獨編譯模式
+    // "esModuleInterop": true, //支援 ES 模組與 CommonJS 模組
+    // "lib": ["ESNext", "DOM"], //TypeScript 核心庫
+    // "skipLibCheck": true, //是否跳過檢查 TS 標準庫
+    // "noEmit": true, //是否編譯 TS 程式碼，不編譯，只進行語法檢查。
+    // "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+
+  "references": [
+    {
+      "path": "./tsconfig.config.json"
+    }
+  ]
+}
