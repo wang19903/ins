@@ -7,35 +7,39 @@
           <TheAvatar :src="post.user?.avatar" />
           <span>{{ post.user?.name }}</span>
         </div>
-        <pre class="postDesc">{{ post.description }}
-              </pre>
-        <div class="comments">
-          <div class="comment" v-for="comment in comments">
-            <TheAvatar :src="comment.user?.avatar" />
-            <span class="user">{{ comment.user?.name }}</span>
-            <span class="commentDate">{{
-              dateToRelative(comment.pubDate)
-            }}</span>
-            <p class="commentContent">{{ comment.content }}</p>
+        <<<<<<< HEAD <pre class="postDesc">{{ post.description }}
+          </pre>
+          =======
+          <pre class="postDesc">{{ post.description }}
+          </pre>
+          >>>>>>> 5ff33192d1068abf75b8f8304a81e4ce7b5df27c
+          <div class="comments">
+            <div class="comment" v-for="comment in comments">
+              <TheAvatar :src="comment.user?.avatar" />
+              <span class="user">{{ comment.user?.name }}</span>
+              <span class="commentDate">{{
+                dateToRelative(comment.pubDate)
+              }}</span>
+              <p class="commentContent">{{ comment.content }}</p>
+            </div>
           </div>
-        </div>
-        <div class="actions">
-          <PostActions :likes="post.liked_bies" :comments="post.comments" :favors="post.favored_bies"
-            @likeClick="store.dispatch('toggleLike', post.id)" @favorClick="store.dispatch('toggleFavor', post.id)"
-            :likedByMe="post.likedByMe" :favoredByMe="post.favoredByMe" />
-          <span class="postPubDate">{{
-            dateToRelative(post.publishedAt)
-          }}</span>
-          <input type="text" name="comment" v-model="content" id="" class="commentInput" placeholder="發表評論..." />
-          <button @click="
-            store.dispatch('addComment', {
-              content,
-              postId: post.id,
-            })
-          " class="commentPubBtn">
-            發佈
-          </button>
-        </div>
+          <div class="actions">
+            <PostActions :likes="post.liked_bies" :comments="post.comments" :favors="post.favored_bies"
+              @likeClick="store.dispatch('toggleLike', post.id)" @favorClick="store.dispatch('toggleFavor', post.id)"
+              :likedByMe="post.likedByMe" :favoredByMe="post.favoredByMe" />
+            <span class="postPubDate">{{
+              dateToRelative(post.publishedAt)
+            }}</span>
+            <input type="text" name="comment" v-model="content" id="" class="commentInput" placeholder="發表評論..." />
+            <button @click="
+              store.dispatch('addComment', {
+                content,
+                postId: post.id,
+              })
+            " class="commentPubBtn">
+              發佈
+            </button>
+          </div>
       </div>
     </div>
   </TheModal>
@@ -165,5 +169,4 @@ console.log(comments, 112)
   font-size: 16px;
   margin-left: 20px;
   grid-column: 4 / 6;
-}
-</style>
+}</style>
