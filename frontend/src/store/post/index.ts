@@ -1,16 +1,49 @@
 import { createPost, loadPosts, likePost, favorPost } from "../../apis/post";
-
+import type { RootState, AugmentedActionContext } from "../index";
+import type { Commit, MutationTree, ActionTree } from "vuex";
 export interface postState {
   list: Array<any>; //posts
   searchResult: Array<any>;
-  currentId: null;
+  currentId: number | null;
 }
 //
 export enum ActionTypes {
-  SHOWPOSTDETAILS = "SHOWPOSTDETAILS"
+  UP_LOAD_POST = "UP_LOAD_POST",
+  LOAD_ALL_POSTS = "LOAD_ALL_POSTS",
+  TOGGLE_LIKE = "TOGGLE_LIKE",
+  TOGGLE_FAVOR = "TOGGLE_FAVOR",
+  SHOW_POST_DETAILS = "SHOW_POST_DETAILS",
+  HIDE_POST_DETAILS = "HIDE_POST_DETAILS",
+  SEARCH_POSTS = "SEARCH_POSTS"
 }
-export const pActions = {
-  [ActionTypes.SHOWPOSTDETAILS]({ commit, dispatch }, id) {
+
+export type Actions = {
+  [ActionTypes.UP_LOAD_POST](
+    { commit, dispatch }: AugmentedActionContext,
+    { image, description }
+  ): void;
+  [ActionTypes.LOAD_ALL_POSTS]({ commit }: AugmentedActionContext): void;
+  [ActionTypes.TOGGLE_LIKE](
+    { commit }: AugmentedActionContext,
+    id: number
+  ): void;
+  [ActionTypes.TOGGLE_FAVOR](
+    { commit }: AugmentedActionContext,
+    id: number
+  ): void;
+  [ActionTypes.SHOW_POST_DETAILS](
+    { commit, dispatch }: AugmentedActionContext,
+    id: number
+  ): void;
+  [ActionTypes.HIDE_POST_DETAILS]({ commit }: AugmentedActionContext): void;
+  [ActionTypes.SEARCH_POSTS](
+    { commit }: AugmentedActionContext,
+    term: string
+  ): void;
+};
+
+export const postActions = {
+  [ActionTypes.SHOW_POST_DETAILS]({ commit, dispatch }, id) {
     commit("setCurrentId", id);
     dispatch("loadAllComments", id);
     commit("changeShowPostDetails", true);
