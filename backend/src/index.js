@@ -6,7 +6,7 @@ module.exports = {
    * your application is initialized.
    *
    * This gives you an opportunity to extend code.
-   */
+   */ //
   register({ strapi }) {},
 
   /**
