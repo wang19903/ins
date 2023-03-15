@@ -20,10 +20,7 @@
     "path": "/documentation",
     "showGeneratedFiles": true,
     "generateDefaultResponse": true,
-    "plugins": [
-      "email",
-      "upload"
-    ]
+    "plugins": ["email", "upload"]
   },
   "servers": [
     {
@@ -1325,9 +1322,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -1354,9 +1349,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -1383,9 +1376,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -1412,9 +1403,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -1441,9 +1430,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -1465,9 +1452,7 @@
             }
           }
         },
-        "tags": [
-          "Comment"
-        ],
+        "tags": ["Comment"],
         "parameters": [
           {
             "name": "sort",
@@ -2803,9 +2788,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -2832,9 +2815,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -2861,9 +2842,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -2890,9 +2869,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -2919,9 +2896,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -2943,9 +2918,7 @@
             }
           }
         },
-        "tags": [
-          "Comment"
-        ],
+        "tags": ["Comment"],
         "parameters": [],
         "requestBody": {
           "required": true,
@@ -4276,9 +4249,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -4305,9 +4276,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -4334,9 +4303,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -4363,9 +4330,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -4392,9 +4357,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -4416,9 +4379,7 @@
             }
           }
         },
-        "tags": [
-          "Comment"
-        ],
+        "tags": ["Comment"],
         "parameters": [
           {
             "name": "id",
@@ -5684,9 +5645,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -5713,9 +5672,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -5742,9 +5699,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -5771,9 +5726,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -5800,9 +5753,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -5824,9 +5775,7 @@
             }
           }
         },
-        "tags": [
-          "Comment"
-        ],
+        "tags": ["Comment"],
         "parameters": [
           {
             "name": "id",
@@ -5933,9 +5882,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -5962,9 +5909,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -5991,9 +5936,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -6020,9 +5963,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -6049,9 +5990,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -6073,9 +6012,7 @@
             }
           }
         },
-        "tags": [
-          "Comment"
-        ],
+        "tags": ["Comment"],
         "parameters": [
           {
             "name": "id",
@@ -7782,9 +7719,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -7811,9 +7746,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -7840,9 +7773,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -7869,9 +7800,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -7898,9 +7827,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -7922,9 +7849,7 @@
             }
           }
         },
-        "tags": [
-          "Post"
-        ],
+        "tags": ["Post"],
         "parameters": [
           {
             "name": "sort",
@@ -9676,9 +9601,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -9705,9 +9628,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -9734,9 +9655,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -9763,9 +9682,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -9792,9 +9709,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -9816,9 +9731,7 @@
             }
           }
         },
-        "tags": [
-          "Post"
-        ],
+        "tags": ["Post"],
         "parameters": [],
         "requestBody": {
           "required": true,
@@ -11610,9 +11523,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -11639,9 +11550,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -11668,9 +11577,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -11697,9 +11604,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -11726,9 +11631,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -11750,9 +11653,7 @@
             }
           }
         },
-        "tags": [
-          "Post"
-        ],
+        "tags": ["Post"],
         "parameters": [
           {
             "name": "id",
@@ -13434,9 +13335,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -13463,9 +13362,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -13492,9 +13389,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -13521,9 +13416,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -13550,9 +13443,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -13574,9 +13465,7 @@
             }
           }
         },
-        "tags": [
-          "Post"
-        ],
+        "tags": ["Post"],
         "parameters": [
           {
             "name": "id",
@@ -13728,9 +13617,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -13757,9 +13644,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -13786,9 +13671,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -13815,9 +13698,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -13844,9 +13725,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -13868,9 +13747,7 @@
             }
           }
         },
-        "tags": [
-          "Post"
-        ],
+        "tags": ["Post"],
         "parameters": [
           {
             "name": "id",
@@ -13924,9 +13801,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -13953,9 +13828,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -13982,9 +13855,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -14011,9 +13882,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -14040,9 +13909,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -14064,9 +13931,7 @@
             }
           }
         },
-        "tags": [
-          "Email"
-        ],
+        "tags": ["Email"],
         "parameters": [],
         "requestBody": {
           "required": true,
@@ -14127,9 +13992,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -14156,9 +14019,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -14185,9 +14046,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -14214,9 +14073,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -14243,9 +14100,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -14267,9 +14122,7 @@
             }
           }
         },
-        "tags": [
-          "Email"
-        ],
+        "tags": ["Email"],
         "parameters": [],
         "requestBody": {
           "required": true,
@@ -14330,9 +14183,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -14359,9 +14210,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -14388,9 +14237,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -14417,9 +14264,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -14446,9 +14291,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -14470,9 +14313,7 @@
             }
           }
         },
-        "tags": [
-          "Email"
-        ],
+        "tags": ["Email"],
         "parameters": [],
         "requestBody": {}
       }
@@ -14864,9 +14705,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -14893,9 +14732,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -14922,9 +14759,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -14951,9 +14786,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -14980,9 +14813,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -15004,9 +14835,7 @@
             }
           }
         },
-        "tags": [
-          "Upload - file"
-        ],
+        "tags": ["Upload - file"],
         "parameters": [],
         "requestBody": {
           "required": true,
@@ -15432,9 +15261,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -15461,9 +15288,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -15490,9 +15315,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -15519,9 +15342,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -15548,9 +15369,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -15572,9 +15391,7 @@
             }
           }
         },
-        "tags": [
-          "Upload - file"
-        ],
+        "tags": ["Upload - file"],
         "parameters": [],
         "requestBody": {}
       }
@@ -15989,9 +15806,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -16018,9 +15833,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -16047,9 +15860,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -16076,9 +15887,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -16105,9 +15914,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -16129,9 +15936,7 @@
             }
           }
         },
-        "tags": [
-          "Upload - file"
-        ],
+        "tags": ["Upload - file"],
         "parameters": [
           {
             "name": "sort",
@@ -16604,9 +16409,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -16633,9 +16436,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -16662,9 +16463,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -16691,9 +16490,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -16720,9 +16517,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -16744,9 +16539,7 @@
             }
           }
         },
-        "tags": [
-          "Upload - file"
-        ],
+        "tags": ["Upload - file"],
         "parameters": [
           {
             "name": "id",
@@ -16779,9 +16572,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -16808,9 +16599,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -16837,9 +16626,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -16866,9 +16653,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -16895,9 +16680,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "error"
-                  ],
+                  "required": ["error"],
                   "properties": {
                     "error": {
                       "type": "object",
@@ -16919,9 +16702,7 @@
             }
           }
         },
-        "tags": [
-          "Upload - file"
-        ],
+        "tags": ["Upload - file"],
         "parameters": [
           {
             "name": "id",

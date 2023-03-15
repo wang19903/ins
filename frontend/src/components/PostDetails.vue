@@ -8,7 +8,7 @@
           <span>{{ post.user?.name }}</span>
         </div>
         <pre class="postDesc">{{ post.description }}
-              </pre>
+                </pre>
         <div class="comments">
           <div class="comment" v-for="comment in comments">
             <TheAvatar :src="comment.user?.avatar" />
@@ -50,7 +50,6 @@ import { computed, ref } from "vue";
 import { dateToRelative } from "../utils/date";
 
 const content = ref("");
-
 const store = useStore(key);
 const post = computed(() => store.getters.postDetails);
 const comments = computed(() => store.state.comment.list);
