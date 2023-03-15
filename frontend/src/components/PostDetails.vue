@@ -8,7 +8,7 @@
           <span>{{ post.user?.name }}</span>
         </div>
         <pre class="postDesc">{{ post.description }}
-                </pre>
+                  </pre>
         <div class="comments">
           <div class="comment" v-for="comment in comments">
             <TheAvatar :src="comment.user?.avatar" />
@@ -16,28 +16,18 @@
             <span class="commentDate">{{
               dateToRelative(comment.pubDate)
             }}</span>
-            <p class="commentContent">{{ comment.content }}</p>
+            <input type="text" name="comment" v-model="content" id="" class="commentInput" placeholder="發表評論..." />
+            <button @click="
+              store.dispatch('addComment', {
+                content,
+                postId: post.id,
+              })
+            " class="commentPubBtn">
+              發佈
+            </button>
           </div>
         </div>
-        <div class="actions">
-          <PostActions :likes="post.liked_bies" :comments="post.comments" :favors="post.favored_bies"
-            @likeClick="store.dispatch('toggleLike', post.id)" @favorClick="store.dispatch('toggleFavor', post.id)"
-            :likedByMe="post.likedByMe" :favoredByMe="post.favoredByMe" />
-          <span class="postPubDate">{{
-            dateToRelative(post.publishedAt)
-          }}</span>
-          <input type="text" name="comment" v-model="content" id="" class="commentInput" placeholder="發表評論..." />
-          <button @click="
-            store.dispatch('addComment', {
-              content,
-              postId: post.id,
-            })
-          " class="commentPubBtn">
-            發佈
-          </button>
-        </div>
       </div>
-    </div>
   </TheModal>
 </template>
 <script setup lang="ts">

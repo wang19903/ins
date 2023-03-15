@@ -55,5 +55,4 @@ defineEmits(["close"]);
 .closeBtn svg {
   width: 54px;
   height: 54px;
-}
-</style>
+}</style>
