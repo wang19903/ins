@@ -1,0 +1,31 @@
+{
+  "name": "backend-prebuilt",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "@strapi/plugin-documentation": "4.0.7",
+    "@strapi/plugin-i18n": "4.0.7",
+    "@strapi/plugin-users-permissions": "4.0.7",
+    "@strapi/strapi": "4.0.7",
+    "sqlite3": "5.1.1"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "6a8c638c-ad4f-4e82-b4f2-d2276bf6c4f5"
+  },
+  "engines": {
+    "node": ">=12.x.x <=16.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}
