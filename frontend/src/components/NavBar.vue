@@ -97,7 +97,6 @@ async function logout() {
   width: 100%;
   padding: 12px;
   padding-left: 36px;
-
   background: #f1f1f1;
   border-radius: 14px;
   border: none;
