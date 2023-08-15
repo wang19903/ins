@@ -45,7 +45,7 @@
     </form>
   </div>
 </template>
-<script setup>
+<script setup lang="ts">
 import TheButton from "../components/TheButton.vue";
 import TheAvatar from "../components/TheAvatar.vue";
 import { useStore } from "vuex";

@@ -21,7 +21,7 @@
     /><span>{{ favors || "" }}</span>
   </div>
 </template>
-<script setup>
+<script setup lang="ts">
 import TheIcon from "./TheIcon.vue";
 
 defineProps({

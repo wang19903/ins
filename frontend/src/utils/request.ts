@@ -1,8 +1,18 @@
 import { getJwtToken } from "../apis/auth";
 
 export async function request(
-  url,
-  { method = "GET", body, headers, auth = true } = {}
+  url: string,
+  {
+    method = "GET",
+    body,
+    headers,
+    auth = true
+  }: {
+    method?: string;
+    body?: any;
+    headers?: Record<string, string>;
+    auth?: boolean;
+  }={}
 ) {
   const res = await fetch(url, {
     method,

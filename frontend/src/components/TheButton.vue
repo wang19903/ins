@@ -1,10 +1,10 @@
 <!-- 按鈕模組 -->
 <template>
   <button class="button" :class="{ primary: color === 'primary', reverse }">
-    <slot></slot>
+    <slot/>
   </button>
 </template>
-<script setup>
+<script setup lang="ts">
 defineProps({
   color: {
     type: String,

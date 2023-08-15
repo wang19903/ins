@@ -1,10 +1,10 @@
 <!-- 內容展示共同設定 -->
 <template>
   <div class="content">
-    <slot></slot>
+    <slot />
   </div>
 </template>
-<script setup></script>
+<script setup lang="ts" />
 <style scoped>
 .content {
   width: 80vw;

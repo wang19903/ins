@@ -1,10 +1,10 @@
 <!-- 動態取得svg標籤 -->
 <template>
   <svg>
-    <use :href="`${sprite}#icon-${icon}`"></use>
+    <use :href="`${sprite}#icon-${icon}`"/>
   </svg>
 </template>
-<script setup>
+<script setup lang="ts">
 // 要import
 import sprite from "../assets/icons/sprite.svg";
 

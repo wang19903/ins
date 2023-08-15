@@ -2,17 +2,17 @@
 <template>
   <Teleport to="body">
     <div class="modal">
-      <div class="backdrop"></div>
+      <div class="backdrop"/>
       <div class="modalContent">
         <button class="closeBtn" @click="$emit('close')">
           <TheIcon icon="close" />
         </button>
-        <slot></slot>
+        <slot/>
       </div>
     </div>
   </Teleport>
 </template>
-<script setup>
+<script setup lang="ts">
 import TheIcon from "./TheIcon.vue";
 
 defineEmits(["close"]);

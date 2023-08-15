@@ -1,5 +1,5 @@
 <template>
-  <TheModal @close="$store.dispatch('hidePostDetails')">
+  <TheModal @close="store.dispatch('hidePostDetails')">
     <div class="postDetails">
       <img class="postImage" :src="post.image" alt="" />
       <div class="postMeta">
@@ -57,13 +57,14 @@
     </div>
   </TheModal>
 </template>
-<script setup>
+<script setup lang="ts">
 import TheAvatar from "./TheAvatar.vue";
 import PostActions from "./PostActions.vue";
 import TheModal from "./TheModal.vue";
 import { useStore } from "vuex";
 import { computed, ref } from "vue";
 import { dateToRelative } from "../utils/date";
+
 
 const content = ref("");
 

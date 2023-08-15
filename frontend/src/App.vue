@@ -4,18 +4,18 @@
       <NavBar />
     </header>
     <TheLayout>
-      <router-view></router-view>
+      <router-view />
     </TheLayout>
   </template>
   <template v-else>
-    <router-view></router-view>
+    <router-view />
   </template>
   <footer class="footer" :class="{ inside: $route.name === 'login' }">
     &copy;demo
   </footer>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import TheLayout from "./components/TheLayout.vue";
 import NavBar from "./components/NavBar.vue";
 import "./assets/base.css";
@@ -31,6 +31,7 @@ import "./assets/base.css";
   padding: 38px 0;
   color: #828282;
 }
+
 .footer.inside {
   position: absolute;
   bottom: 0;

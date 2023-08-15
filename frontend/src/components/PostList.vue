@@ -1,9 +1,9 @@
 <template>
   <div class="postList">
-    <slot></slot>
+    <slot/>
   </div>
 </template>
-<script setup></script>
+<scrip setup lang="ts" />
 <style scoped>
 .postList {
   display: grid;

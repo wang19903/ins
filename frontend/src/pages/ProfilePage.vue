@@ -41,7 +41,7 @@
     </div>
   </div>
 </template>
-<script setup>
+<script setup lang="ts">
 import TheIcon from "../components/TheIcon.vue";
 import TheAvatar from "../components/TheAvatar.vue";
 import { useStore } from "vuex";

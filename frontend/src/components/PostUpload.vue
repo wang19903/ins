@@ -22,7 +22,7 @@
     </div>
   </TheModal>
 </template>
-<script setup>
+<script setup lang="ts">
 import TheModal from "./TheModal.vue";
 import TheIcon from "./TheIcon.vue";
 import TheButton from "./TheButton.vue";

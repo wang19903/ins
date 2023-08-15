@@ -38,7 +38,7 @@
     </div>
   </nav>
 </template>
-<script setup>
+<script setup lang="ts">
 import TheIcon from "./TheIcon.vue";
 import TheAvatar from "./TheAvatar.vue";
 import { useStore } from "vuex";

@@ -6,7 +6,7 @@
     </PostList>
   </div>
 </template>
-<script setup>
+<script setup lang="ts">
 import PostList from "../components/PostList.vue";
 import PostItem from "../components/PostItem.vue";
 import { computed } from "vue";

@@ -3,10 +3,10 @@ import SearchPage from "./pages/SearchPage.vue";
 import ProfilePage from "./pages/ProfilePage.vue";
 import ProfileEdittingPage from "./pages/ProfileEdittingPage.vue";
 import LoginPage from "./pages/LoginPage.vue";
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHistory,RouteRecordRaw,Router } from "vue-router";
 import { getJwtToken } from "./apis/auth";
 
-const routes = [
+const routes:RouteRecordRaw[] = [
   {
     path: "/",
     name: "home",
@@ -34,7 +34,7 @@ const routes = [
   }
 ];
 
-const router = createRouter({
+const router:Router = createRouter({
   routes: routes,
   history: createWebHistory()
 });
