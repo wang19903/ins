@@ -16,7 +16,7 @@
           placeholder="寫些內容...."
           class="postContentInput"
           v-model="description"
-        ></textarea>
+        />
         <TheButton class="pubBtn" @click="publishPost">發佈</TheButton>
       </div>
     </div>
@@ -37,20 +37,15 @@ const description = ref("");
 
 async function handleImageUpload(e) {
   //  accept="image/*"圖片檔。只能上傳一張圖片
-  // console.log(e);
   const imageFile = e.target.files[0];
   if (imageFile) {
     // createObjectURL預覽上傳圖片
     imageObjUrl.value = URL.createObjectURL(imageFile);
-    // console.log(imageObjUrl, 99);
     // 圖片資料
     image.value = imageFile;
-    // console.log(imageFile, 99);
   }
 }
 function publishPost() {
-  // console.log(e, "publishPost");
-  // console.log(image.value, description.value, "publishPost");
   store.dispatch("uploadPost", {
     image: image.value,
     description: description.value,

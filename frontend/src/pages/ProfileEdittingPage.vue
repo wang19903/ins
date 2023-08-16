@@ -12,7 +12,7 @@
       <label for="name">暱稱：</label>
       <input type="text" v-model="profileData.name" />
       <label for="intro">簡介：</label>
-      <textarea rows="12" v-model="profileData.intro"></textarea>
+      <textarea rows="12" v-model="profileData.intro" />
       <label for="mobilePhone">手機號碼：</label>
       <input type="text" v-model="profileData.mobilePhone" />
       <label>性別：</label>

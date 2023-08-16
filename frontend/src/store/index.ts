@@ -1,11 +1,12 @@
 import { createStore,Store } from "vuex";
 import { user,UserState } from "./user";
 import { post,PostState } from "./post";
-import { comment } from "./comment";
+import { comment,CommentState } from "./comment";
 
 export interface RootState {
   user: UserState;
   post: PostState;
+  comment: CommentState;
   showPostUpload: boolean;
   showPostDetails: boolean;
   messages: string;
@@ -15,13 +16,15 @@ export default createStore<RootState>({
   modules: {
     user,
     post,
+    comment
   },
   state: {
       showPostUpload: false,
       showPostDetails: false,
       messages: "",
       user: {}as RootState["user"],
-      post: {}as RootState["post"]
+      post: {}as RootState["post"],
+      comment: {}as RootState["comment"]
   },
   mutations: {
     changeShowPostUpload(state:RootState, show:boolean) {

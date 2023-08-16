@@ -65,7 +65,6 @@ import { useStore } from "vuex";
 import { computed, ref } from "vue";
 import { dateToRelative } from "../utils/date";
 
-
 const content = ref("");
 
 const store = useStore();

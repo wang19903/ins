@@ -29,7 +29,7 @@
           />勾選表示同意隱私權政策
         </div>
       </form>
-      <Alert></Alert>
+      <Alert/>
     </div>
   </div>
 </template>

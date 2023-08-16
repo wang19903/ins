@@ -37,10 +37,12 @@ import TheAvatar from "../components/TheAvatar.vue";
 import PostActions from "../components/PostActions.vue";
 import { dateToRelative } from "../utils/date";
 import { useStore } from "vuex";
+
 const store = useStore();
+
 defineProps({
   post: {
-    type: Object,
+    type: Object ,
     default: {},
   },
 });
