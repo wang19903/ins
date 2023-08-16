@@ -24,7 +24,7 @@ export async function loadPosts(filters = "") {
   const response = await request(
     "/api/posts?populate=*" + (filters && `&${filters}`)
   );
-  console.log(response, "loadPosts");
+  // console.log(response, "loadPosts");
   // loadPostsLikedOrFavoredByMe("likes");
   // loadPostsLikedOrFavoredByMe("favors");
   //? return undefined 不是報錯

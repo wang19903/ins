@@ -25,10 +25,10 @@
             :likes="post.liked_bies"
             :comments="post.comments"
             :favors="post.favored_bies"
-            @likeClick="store.dispatch('toggleLike', post.id)"
-            @favorClick="store.dispatch('toggleFavor', post.id)"
             :likedByMe="post.likedByMe"
             :favoredByMe="post.favoredByMe"
+            @likeClick="store.dispatch('toggleLike', post.id)"
+            @favorClick="store.dispatch('toggleFavor', post.id)"
           />
           <span class="postPubDate">{{
             dateToRelative(post.publishedAt)

@@ -4,8 +4,7 @@
       <TheAvatar :width="186" :height="186" :src="user.avatar" />
       <div class="profile">
         <p class="name">
-          <span>{{ user.name }}</span
-          ><router-link to="/profile/edit">編輯個人資料</router-link>
+          <span>{{ user.name }}</span><router-link to="/profile/edit">編輯個人資料</router-link>
         </p>
         <p class="handle">@{{ user.username }}</p>
         <div class="description">
@@ -17,13 +16,8 @@
       </div>
     </div>
     <div class="tabs">
-      <div
-        v-for="(tab, index) in tabs"
-        class="tab"
-        :class="{ active: index === currentTab }"
-        :key="index"
-        @click="currentTab = index"
-      >
+      <div v-for="(tab, index) in tabs" class="tab" :class="{ active: index === currentTab }" :key="index"
+        @click="currentTab = index">
         <TheIcon :icon="tab.icon" />
         <p>{{ tab.label }}</p>
       </div>
@@ -31,12 +25,7 @@
     <div class="tabContent">
       <p>{{ myPosts[currentTab].length }}</p>
       <div class="posts">
-        <img
-          v-for="post in myPosts[currentTab]"
-          :src="post.image"
-          :key="post.id"
-          class="postImage"
-        />
+        <img v-for="post in myPosts[currentTab]" :src="post.image" :key="post.id" class="postImage" />
       </div>
     </div>
   </div>
@@ -44,9 +33,9 @@
 <script setup lang="ts">
 import TheIcon from "../components/TheIcon.vue";
 import TheAvatar from "../components/TheAvatar.vue";
-import { useStore } from "vuex";
 import { computed, ref, reactive, watch } from "vue";
 import { loadPostsByMe, loadPostsLikedOrFavoredByMe } from "../apis/post";
+import { useStore } from "vuex";
 
 const store = useStore();
 
@@ -58,7 +47,12 @@ const gender = computed(() => {
     return "女生";
   }
 });
-const tabs = ref([
+
+type Tab = {
+  label: string;
+  icon: string;
+};
+const tabs = ref<Tab[]>([
   {
     label: "我的",
     icon: "posts",
@@ -75,7 +69,11 @@ const tabs = ref([
 
 const currentTab = ref(0);
 
-const myPosts = reactive({
+type Post = {
+  id: number;
+  image: string;
+};
+const myPosts = reactive<Record<number, Post[]>>({
   0: [],
   1: [],
   2: [],
@@ -123,14 +121,16 @@ watch(
   align-items: center;
 }
 
-.profile .name > span {
+.profile .name>span {
   font-size: 26px;
 }
-.profile .name > a {
+
+.profile .name>a {
   color: #1da0ff;
   text-decoration: none;
   margin-left: 26px;
 }
+
 .profile .handle {
   margin-top: 4px;
   color: #848484;
@@ -146,7 +146,6 @@ watch(
   grid-template-columns: repeat(3, 88px);
   column-gap: 4vw;
   justify-content: center;
-
   margin-top: 7vmin;
   margin-bottom: 20px;
 }
@@ -156,7 +155,8 @@ watch(
   padding: 12px 0;
   cursor: pointer;
 }
-.tab > svg {
+
+.tab>svg {
   width: 32px;
   height: 32px;
   stroke: #8a9194;
@@ -168,15 +168,16 @@ watch(
   border-radius: 18px;
 }
 
-.tab.active > svg {
+.tab.active>svg {
   stroke: #1787d9;
   fill: #1787d9;
 }
-.tab.active > p {
+
+.tab.active>p {
   color: #1787d9;
 }
 
-.tabContent > p {
+.tabContent>p {
   text-align: center;
   font-weight: 600;
   margin-bottom: 32px;

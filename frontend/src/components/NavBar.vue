@@ -55,14 +55,14 @@ function publishPost() {
   store.commit("changeShowPostUpload", true);
 }
 
-async function searchPosts(e) {
+async function searchPosts() {
   if (searchTerm.value === "") {
     router.replace("/");
   } else {
     await store.dispatch("searchPosts", searchTerm.value);
     router.push({
       name: "search_result",
-      params: {
+      query: {
         term: searchTerm.value,
       },
     });

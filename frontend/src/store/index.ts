@@ -1,4 +1,4 @@
-import { createStore,Store } from "vuex";
+import { createStore } from "vuex";
 import { user,UserState } from "./user";
 import { post,PostState } from "./post";
 import { comment,CommentState } from "./comment";

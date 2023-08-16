@@ -57,7 +57,17 @@ const store = useStore();
 const router = useRouter();
 
 const user = computed(() => store.state.user.user);
-const profileData = reactive({
+
+interface ProfileData {
+  avatar: string;
+  username: string;
+  name: string;
+  intro: string;
+  mobilePhone: string;
+  gender: string;
+  website: string;
+}
+const profileData = reactive<ProfileData>({
   avatar: user.value.avatar,
   username: user.value.username,
   name: user.value.name,

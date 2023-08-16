@@ -15,7 +15,8 @@ const routes:RouteRecordRaw[] = [
   {
     path: "/search_result",
     name: "search_result",
-    component: SearchPage
+    component: SearchPage,
+    props: (route) => ({ term: route.query.term })
   },
   {
     path: "/profile",

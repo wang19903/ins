@@ -13,11 +13,12 @@ import { computed } from "vue";
 import { useStore } from "vuex";
 import { useRoute } from "vue-router";
 
-const store = useStore();
+const store = useStore()
 const searchResult = computed(() => store.state.post.searchResult);
 
 const route = useRoute();
-const term = computed(() => route.params.term);
+const term = computed<string>(() => route.query.term as string);
+
 </script>
 <style scoped>
 .title {
